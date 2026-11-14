@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>স্কন্ধকাটা — বাংলা হরর থ্রিলার</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+:root{--red:#e11b22;--paper:#f3e9dc;--panel:#090b11}
+*{box-sizing:border-box}
+body{margin:0;background:#030509;color:var(--paper);font-family:'Hind Siliguri',system-ui,sans-serif}
+main{min-height:100vh;overflow:hidden;position:relative;background:radial-gradient(ellipse at 50% 25%,#1b293d,#06080e 65%,#000)}
+main:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background:repeating-linear-gradient(105deg,transparent 0 35px,#b6d4ed 36px,transparent 38px);animation:rain .25s linear infinite}
+@keyframes rain{to{background-position:-30px 60px}}
+header{max-width:1150px;margin:auto;padding:22px 20px 8px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-size:clamp(26px,5vw,48px);font-weight:700;color:#f02b31;text-shadow:0 0 18px #a00}
+.pill{border:1px solid #8b1a20;border-radius:30px;padding:7px 13px;color:#e9caca;font-size:14px}
+.cover{width:min(1150px,94vw);margin:10px auto 22px;position:relative;border:1px solid #43242a;border-radius:16px;overflow:hidden;box-shadow:0 18px 70px #000}
+.cover img{display:block;width:100%;height:auto;min-height:230px;object-fit:cover;filter:saturate(.85)}
+.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#05070caa,transparent 45%);pointer-events:none}
+.layout{width:min(1050px,92vw);margin:0 auto 60px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px;position:relative}
+.panel{background:#090b11eF;border:1px solid #55242a;border-radius:14px;padding:22px;box-shadow:0 12px 35px #0009}
+h2{color:#ff555a;margin:0 0 8px;font-size:23px}
+#chapter{color:#ff7478;font-size:13px;letter-spacing:2px}
+#story{font-size:clamp(18px,2.3vw,22px);line-height:1.9;min-height:180px;margin:12px 0 18px}
+.controls{display:flex;flex-wrap:wrap;gap:9px}
+button{border:1px solid #a32a30;background:linear-gradient(#8d1119,#43070b);color:#fff;border-radius:9px;padding:11px 17px;font:600 15px inherit;cursor:pointer}
+button:hover{filter:brightness(1.3);box-shadow:0 0 18px #a11}
+button:focus-visible{outline:2px solid white;outline-offset:3px}
+#progress{height:6px;background:#292b30;border-radius:9px;overflow:hidden;margin:16px 0}
+#bar{height:100%;width:0;background:#ed2028;transition:width .5s}
+.visual{min-height:290px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 80%,#283747,#080b12 68%);border-radius:10px}
+.moon{position:absolute;top:25px;right:35px;width:75px;height:75px;border-radius:50%;background:#d9dce0;box-shadow:0 0 40px #dce7ff88}
+.house{position:absolute;bottom:0;width:76%;height:57%;background:#151923;clip-path:polygon(50% 0,100% 28%,94% 100%,6% 100%,0 28%);border-top:5px solid #303541}
+.window{position:absolute;top:47%;left:58%;width:30px;height:42px;background:#ffbf52;box-shadow:0 0 22px #ffae36;animation:flicker 3s infinite}
+@keyframes flicker{0%,18%,22%,60%,100%{opacity:1}20%,62%{opacity:.25}}
+.ghost{position:absolute;bottom:8%;left:42%;font-size:clamp(75px,12vw,125px);filter:grayscale(1);animation:float 3.4s ease-in-out infinite;opacity:.88;text-shadow:0 0 22px #dceaff66}
+@keyframes float{50%{transform:translateY(-15px) translateX(5px)}}
+.caption{position:absolute;bottom:10px;left:12px;color:#d7dbe2;font-size:12px;background:#05070bbd;padding:5px 9px;border-radius:6px}
+.side-note{color:#aaa;font-size:14px;line-height:1.7}
+footer{text-align:center;color:#777;padding:0 15px 25px;font-size:13px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.cover img{min-height:190px}.panel{padding:17px}#story{min-height:145px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">স্কন্ধকাটা</div>
+  <div class="pill">একটি বাংলা হরর থ্রিলার</div>
+</header>
+
+<section class="cover">
+  <img src="assets/cover.png" alt="চাঁদের আলোয় পরিত্যক্ত বাড়ি, ভীত নিলয় ও স্কন্ধকাটা ভূতের কার্টুন-কমিক দৃশ্য">
+</section>
+
+<section class="layout">
+  <article class="panel">
+    <div id="chapter">CHAPTER 01</div>
+    <h2>রাত ২টা ১৭ মিনিট</h2>
+    <p id="story">শুরু করতে নিচের বোতাম চাপো। হেডফোন ব্যবহার করলে আবহটা আরও ভালো লাগবে।</p>
+    <div id="progress"><div id="bar"></div></div>
+    <div class="controls">
+      <button id="start">▶ গল্প শুরু</button>
+      <button id="pause">Ⅱ Pause</button>
+      <button id="resume">▶ Continue</button>
+      <button id="restart">↻ Restart</button>
+      <button id="sound">♫ আবহের শব্দ: বন্ধ</button>
+    </div>
+    <p class="side-note">বাংলা ভয়েস ব্রাউজারের Speech Synthesis-এর ওপর নির্ভরশীল। ডিভাইসে বাংলা ভয়েস না থাকলে লেখা দেখা যাবে, কিন্তু ভয়েস নাও শোনা যেতে পারে।</p>
+  </article>
+
+  <aside class="panel">
+    <div class="visual" aria-label="অ্যানিমেটেড কার্টুন ভূতের দৃশ্য">
+      <div class="moon"></div><div class="house"></div><div class="window"></div>
+      <div class="ghost">👻</div>
+      <div class="caption">মাধবপুর • রাত ২:১৭</div>
+    </div>
+    <h2 style="margin-top:16px">চোখ রাখো জানালায়...</h2>
+    <p class="side-note">প্রতি অধ্যায়ের সঙ্গে দৃশ্য বদলাবে। কুয়াশা, বৃষ্টি আর জানালার আলো গল্পের আবহ তৈরি করবে।</p>
+  </aside>
+</section>
+<footer>একটি কাল্পনিক হরর গল্প • আলো জ্বালিয়ে উপভোগ করো</footer>
+</main>
+<script>
+const scenes=[
+["CHAPTER 01 — THE HOUSE","রাত ২টা ১৭ মিনিট। গ্রামের নাম মাধবপুর। গ্রামের শেষ মাথায় একটা পুরোনো বাড়ি। বাড়িটায় প্রায় ১৫ বছর ধরে কেউ থাকে না। কিন্তু প্রতি রাতে ঠিক ২টা ১৭ মিনিটে দোতলার একটা জানালায় আলো জ্বলে ওঠে।"],
+["CHAPTER 02 — THE WARNING","শহর থেকে গ্রামে বেড়াতে এসেছিল নিলয়। সে ভূত বিশ্বাস করত না। এক রাতে সে সেই পরিত্যক্ত বাড়িতে ঢুকে পড়ল। হঠাৎ তার ফোনে একটা মেসেজ এল। তুমি কি বাড়ির ভেতরে? নিলয় লিখল, কে আপনি? উত্তর এল, দোতলায় এসো না।"],
+["CHAPTER 03 — 2:17 AM","হঠাৎ দোতলার জানালায় আলো জ্বলে উঠল। ঠিক রাত ২টা ১৭ মিনিট। ওপর থেকে শব্দ এল। ঠক... ঠক... ঠক... সিঁড়ির মাথায় সাদা জামা পরা একটা অবয়ব দাঁড়িয়ে ছিল। কিন্তু তার কোনো মাথা ছিল না!"],
+["CHAPTER 04 — THE MESSAGE","নিলয় ফোনের ক্যামেরা চালু করল। স্ক্রিনে সেই অবয়বটা দেখা যাচ্ছিল। হঠাৎ ফোনে মেসেজ এল। ক্যামেরাটা বন্ধ করো। নিলয় লিখল, তুমি কে? উত্তর এল, আমি তোমার পেছনে দাঁড়িয়ে আছি।"],
+["CHAPTER 05 — THE LAST VIDEO","পরদিন সকালে নিলয়ের ফোন পাওয়া গেল। কিন্তু নিলয় নিখোঁজ। পুলিশ তার শেষ ভিডিওটি চালাল। ভিডিওর শেষ মুহূর্তে অডিওতে শোনা গেল, স্যার... ও তো আমাকে দেখতে পাচ্ছে না। আরেকটি কণ্ঠ বলল, কারণ ওর পেছনে তো আমিই দাঁড়িয়ে আছি।"],
+["FINAL CHAPTER — 2:17","সেই রাতেই থানার সিসিটিভিতে দেখা গেল, রাত ২টা ১৭ মিনিটে নিলয়ের ফোন নিজে থেকেই জ্বলে উঠেছে। স্ক্রিনে একটি মেসেজ। এবার কি বাড়ি ফিরব? তারপর ফোনটা বন্ধ হয়ে গেল। গল্প শেষ... নাকি?"]
+];
+let index=0, timer=null, audioCtx=null, soundOn=false;
+const story=document.getElementById("story"), chapter=document.getElementById("chapter"), bar=document.getElementById("bar");
+function stopVoice(){if("speechSynthesis" in window)speechSynthesis.cancel()}
+function speak(text){
+ if(!("speechSynthesis" in window))return;
+ stopVoice();
+ const u=new SpeechSynthesisUtterance(text);u.lang="bn-BD";u.rate=.88;u.pitch=.78;
+ const v=speechSynthesis.getVoices().find(x=>x.lang.toLowerCase().startsWith("bn"));
+ if(v)u.voice=v;
+ speechSynthesis.speak(u);
+}
+function showScene(){
+ clearTimeout(timer);
+ if(index>=scenes.length){chapter.textContent="THE END";story.textContent="সমাপ্ত। তবে ঘড়িতে কি এখনও ২টা ১৭?";bar.style.width="100%";return}
+ chapter.textContent=scenes[index][0];story.textContent=scenes[index][1];
+ bar.style.width=((index+1)/scenes.length*100)+"%";
+ speak(scenes[index][1]);
+ // Generous reading time; narration can be paused independently.
+ timer=setTimeout(()=>{index++;showScene()},26000);
+}
+document.getElementById("start").onclick=()=>{index=0;showScene()};
+document.getElementById("pause").onclick=()=>{clearTimeout(timer);if("speechSynthesis"in window)speechSynthesis.pause()};
+document.getElementById("resume").onclick=()=>{if("speechSynthesis"in window&&speechSynthesis.paused)speechSynthesis.resume();else if(!timer&&index<scenes.length)showScene()};
+document.getElementById("restart").onclick=()=>{clearTimeout(timer);stopVoice();index=0;showScene()};
+function ambient(){
+ const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+ if(!audioCtx)audioCtx=new AC();
+ const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();
+ osc.type="sine";osc.frequency.value=48;gain.gain.value=.018;
+ osc.connect(gain);gain.connect(audioCtx.destination);osc.start();
+ return ()=>{gain.gain.setTargetAtTime(0,audioCtx.currentTime,.15);setTimeout(()=>osc.stop(),600)};
+}
+let stopAmbient=null;
+document.getElementById("sound").onclick=async()=>{
+ soundOn=!soundOn;
+ if(soundOn){if(!audioCtx)ambient();else if(audioCtx.state==="suspended")await audioCtx.resume();stopAmbient=ambient();document.getElementById("sound").textContent="♫ আবহের শব্দ: চালু"}
+ else{if(stopAmbient)stopAmbient();document.getElementById("sound").textContent="♫ আবহের শব্দ: বন্ধ"}
+};
+</script>
+</body>
+</html>
